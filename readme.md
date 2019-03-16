@@ -1,5 +1,7 @@
 # Ashley Example Refactored So It Uses Ktx-Ashley
 
+![screenshot](.github/screenshot.png?raw=true)
+
 Ktx-ashley offers some really nice extensions that simplify entity creation into a dsl, and make it so creating a component 
 mapper and accessing an entity with a cleaner syntax (something that's done over and over in systems).
 
