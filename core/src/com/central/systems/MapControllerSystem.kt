@@ -17,11 +17,8 @@ import ktx.ashley.*
 
 class MapControllerSystem : EntitySystem() {
 
-    val map = TmxMapLoader().load("map/map.tmx")
-    val mr = OrthogonalTiledMapRenderer(map, MyGameObj.unitScale)
-
-    val solid = map.layers["solid"] as TiledMapTileLayer
-    val background = map.layers["background"] as TiledMapTileLayer
+    val solid = MyGameObj.map.layers["solid"] as TiledMapTileLayer
+    val background = MyGameObj.map.layers["background"] as TiledMapTileLayer
 
     private val tiles = Array<Rectangle>()
 

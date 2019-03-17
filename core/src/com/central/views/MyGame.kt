@@ -28,7 +28,7 @@ class MyGame(val application: App) : KtxScreen {
         ashleyEngine.add {
             entity {
                 with<TextureComponent> {
-                    region = TextureRegion(Texture(Gdx.files.internal("alex.png")))
+                    region = TextureRegion(MyGameObj.alexTex)
                 }
                 with<PhysicsComponent> {
                     w = 30f
@@ -40,7 +40,7 @@ class MyGame(val application: App) : KtxScreen {
             }
             entity {
                 with<TextureComponent> {
-                    region = TextureRegion(Texture(Gdx.files.internal("enemy.png")))
+                    region = TextureRegion(MyGameObj.enemyTex)
                 }
                 with<PhysicsComponent> {
                     w = 40f
@@ -62,5 +62,11 @@ class MyGame(val application: App) : KtxScreen {
 
     override fun resize(width: Int, height: Int) {
 
+    }
+
+    override fun dispose() {
+        MyGameObj.dispose()
+        println("all disposable memory freed")
+        super.dispose()
     }
 }
